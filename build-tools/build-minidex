@@ -97,8 +97,8 @@ if (fs.existsSync('sprites/ani/')) {
 	console.log('DONE');
 } else {
 	try {
-		fs.unlinkSync('data/pokedex-mini.js');
-		fs.unlinkSync('data/pokedex-mini-bw.js');
+		fs.writeFileSync('data/pokedex-mini.js', 'exports.BattlePokemonSprites = {};\\n');
+		fs.writeFileSync('data/pokedex-mini-bw.js', 'exports.BattlePokemonSpritesBW = {};\\n');
 	} catch (e) {}
 	console.log('SKIPPED');
 }
