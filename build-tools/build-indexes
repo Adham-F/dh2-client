@@ -1193,8 +1193,7 @@ function buildTeambuilderTables() {
 				const formatCacheName = toID(Dex.formats.formatsListCache[i].name);
 				if (formatCacheMod !== modConfigId) continue;
 				// petModFormats[formatCacheMod] = Formats.find(m => m.mod === modConfigId);
-				if (modConfigId === 'badnboosted' || modConfigId === 'gen3colosseum') petModFormats[formatCacheName] = OfficialFormats.find(m => toID(m.name) === formatCacheName);
-				else petModFormats[formatCacheName] = Formats.find(m => toID(m.name) === formatCacheName);
+				petModFormats[formatCacheName] = Formats.find(m => toID(m.name) === formatCacheName);
 				const format = petModFormats[formatCacheName];
 				let maxGen = 
 				formatCacheName.substr(0, 3) === 'gen' && parseInt(formatCacheMod.substr(3, 1)) < 10 ? parseInt(formatCacheMod.substr(3, 1)) : 9;
