@@ -3435,9 +3435,9 @@
 			if (set.dynamaxLevel) delete set.dynamaxLevel;
 			if (set.gigantamax) delete set.gigantamax;
 			if (set.teraType) delete set.teraType;
-			console.log("AUTO-ASSIGNING ITEM:", species.name, species.requiredItems);
-if (!(this.curTeam.format.includes('hackmons') || this.curTeam.format.endsWith('bh')) && species.requiredItems.length === 1) {
-				set.item = species.requiredItems[0] || '';
+			let reqItems = species.requiredItems || (species.requiredItem ? [species.requiredItem] : []);
+			if (!(this.curTeam.format.includes('hackmons') || this.curTeam.format.endsWith('bh')) && reqItems.length === 1) {
+				set.item = reqItems[0];
 			} else {
 				set.item = '';
 			}
