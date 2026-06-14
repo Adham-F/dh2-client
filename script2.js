@@ -1,0 +1,1 @@
+const fs = require('fs'); const data = fs.readFileSync('play.pokemonshowdown.com/data/teambuilder-tables.js', 'utf8'); const start = data.indexOf('overrideItemInfo={'); const substr = data.substring(start, start + 30000); const match = substr.match(/"heavydutyboots":.*?}/); console.log(match ? match[0] : 'not found');
