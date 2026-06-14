@@ -1240,7 +1240,6 @@ class Move implements Effect {
 	readonly multihit: number[] | number | null;
 	readonly hasCrashDamage: boolean;
 	readonly basePowerCallback: boolean;
-	readonly noPPBoosts: boolean;
 	readonly status: string;
 	readonly secondaries: ReadonlyArray<any> | null;
 	readonly noSketch: boolean;
@@ -1278,7 +1277,6 @@ class Move implements Effect {
 		this.multihit = data.multihit || null;
 		this.hasCrashDamage = data.hasCrashDamage || false;
 		this.basePowerCallback = !!data.basePowerCallback;
-		this.noPPBoosts = data.noPPBoosts || false;
 		this.status = data.status || '';
 		this.secondaries = data.secondaries || (data.secondary ? [data.secondary] : null);
 		this.noSketch = !!data.noSketch;
