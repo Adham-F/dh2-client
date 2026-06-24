@@ -1024,7 +1024,7 @@ function buildTeambuilderTables() {
 
 	// Client relevant data that should be overriden by past gens and mods
 	const overrideSpeciesKeys = ['name', 'baseSpecies', 'forme', 'gen', 'abilities', 'baseStats', 'cosmeticFormes', 'isNonstandard', 'requiredItems', 'types', 'unreleasedHidden'];
-	const overrideMoveKeys = ['accuracy', 'basePower', 'category', 'desc', 'flags', 'isNonstandard', 'noSketch', 'pp', 'priority', 'shortDesc', 'target', 'type', 'viable'];
+	const overrideMoveKeys = ['accuracy', 'basePower', 'category', 'desc', 'flags', 'isNonstandard', 'noPPBoosts', 'noSketch', 'pp', 'priority', 'shortDesc', 'target', 'type', 'viable'];
 	const overrideAbilityKeys = ['desc', 'flags', 'isNonstandard', 'rating', 'shortDesc'];
 	const overrideItemKeys = ['gen', 'megaEvolves', 'megaStone', 'itemUser', 'desc', 'isNonstandard', 'rating', 'shortDesc'];
 
